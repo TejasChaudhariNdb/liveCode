@@ -1,0 +1,58 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+function refresh(){
+var content = $('#type_code').val();
+document.getElementById("output").srcdoc = content ;
+console.log(content);
+
+
+}
+</script>
+<style>
+*{
+padding:0;
+margin:0;
+}
+
+
+#type_code{
+width:100%;
+height:100%;
+display:inline-flex;
+
+}
+.main{
+
+background:#ecf0f1;
+width:100%;
+height:100%;
+display:inline-flex;
+
+}
+#output{
+background:white;
+width:100%;
+height:100%;
+border:none;
+
+}
+</style>
+
+<body>
+<div class="main">
+<textarea id="type_code" placeholder="type code.." onkeyup="refresh()"></textarea>
+
+<iframe id="output"></iframe>
+
+</div>
+
+
+
+
+
+</body>
+
+
+</html>
